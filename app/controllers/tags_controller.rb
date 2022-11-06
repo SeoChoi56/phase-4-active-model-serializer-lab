@@ -17,4 +17,8 @@ class TagsController < ApplicationController
     render json: { error: "Tag not found" }, status: :not_found
   end
 
+  def tag_params
+    params.permit(:name)
+  end
+
 end
